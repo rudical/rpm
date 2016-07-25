@@ -189,6 +189,7 @@ module NewRelic
 
       def html_safe_if_needed(string)
         string = string.html_safe if string.respond_to?(:html_safe)
+        string = string.html_safe! if string.respond_to?(:html_safe!)
         string
       end
     end
